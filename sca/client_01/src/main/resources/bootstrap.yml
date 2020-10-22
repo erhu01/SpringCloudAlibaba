@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: client-01 #项目名
+  cloud:
+    nacos:
+      config: #配置中心设置
+        server-addr: 115.29.150.104:8848 #配置中心地址
+        file-extension: properties #配置中心中配置文件的格式，巨坑：文件后缀名要加上
+        prefix: client-01 #配置文件名称
+      discovery:
+        server-addr: 115.29.150.104:8848  #不用写协议
+  profiles:
+    active: dev #指定环境
+#读取的配置文件：${prefix}-${spring.profiles.active}.${file-extension}
+
+#端口号
+server:
+  port: 9101

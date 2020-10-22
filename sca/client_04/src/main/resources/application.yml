@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: client-01
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 115.29.150.104:8848  #不用写协议
+
+server:
+  port: 9104
